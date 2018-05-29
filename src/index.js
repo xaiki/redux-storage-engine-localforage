@@ -4,7 +4,7 @@ function rejectWithMessage (error) {
   return Promise.reject(error.message)
 }
 
-export default (key, config = {}, replacer, reviver) => {
+export default (key, config = {}) => {
   localforage.config(config)
 
   return {
