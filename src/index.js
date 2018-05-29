@@ -10,14 +10,11 @@ export default (key, config = {}, replacer, reviver) => {
   return {
     load () {
       return localforage.getItem(key)
-        .then((jsonState) => JSON.parse(jsonState, reviver) || {})
-        .catch(rejectWithMessage)
+                        .catch(rejectWithMessage)
     },
 
     save (state) {
-      return Promise.resolve()
-        .then(() => JSON.stringify(state, replacer))
-        .then((jsonState) => localforage.setItem(key, jsonState))
+      localforage.setItem(key, state)
         .catch(rejectWithMessage)
     }
   }
