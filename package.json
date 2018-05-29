@@ -2,7 +2,7 @@
   "name": "redux-storage-engine-localforage",
   "version": "2.0.0",
   "description": "Version storage with migration for redux-storage",
-  "main": "build/index.js",
+  "main": "src/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "make test",
