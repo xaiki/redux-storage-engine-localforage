@@ -14,7 +14,7 @@ export default (key, config = {}, replacer, reviver) => {
     },
 
     save (state) {
-      localforage.setItem(key, state)
+      return localforage.setItem(key, state)
         .catch(rejectWithMessage)
     }
   }
